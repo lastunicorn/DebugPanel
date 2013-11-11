@@ -1,0 +1,47 @@
+.lu-debug {
+    padding: 3px;
+    border-radius: 3px;
+    color: #b0b0b0;
+    font-family: arial;
+    font-size: 12px;
+    border: 1px solid #d0d0d0;
+    background-color: #e0e0e0;
+}
+
+.lu-debug .clientPanel {
+    height: 300px;
+    overflow: auto;
+}
+
+.lu-debug .item {
+    padding: 1px 1px 1px 22px;
+    line-height: 16px;
+    color: #202020;
+    margin: 1px 0;
+    background-position: 2px 1px;
+    background-repeat: no-repeat;
+}
+
+.lu-debug .item.info {
+    background-image: url(images/info.png);
+}
+
+.lu-debug .item.warning {
+    background-image: url(images/warning.png);
+    background-color: palegoldenrod;
+}
+
+.lu-debug .item.error {
+    background-image: url(images/error.png);
+    background-color: orangered;
+}
+
+.lu-debug .item .timestamp {
+    margin-right: 5px;
+    color: #707070;
+}
+
+.lu-debug .separator {
+    height: 1px;
+    background-color: #a0a0a0;
+}
