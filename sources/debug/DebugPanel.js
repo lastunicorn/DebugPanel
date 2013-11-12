@@ -6,8 +6,8 @@
  * Features implemented:
  * - writes messages of type: simple, info, warning and error.
  * - optionally writes a timestamp.
- * - can insert the new item at the beginning or at the end of the list.
- * - optionally can insert separators between items.
+ * - can insert the new message at the beginning or at the end of the list.
+ * - optionally can insert separators between messages.
  *
  * Future features:
  * - the types of the items able to display will be configurable.

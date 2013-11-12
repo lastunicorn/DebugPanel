@@ -7,6 +7,11 @@ lu.debug = lu.debug || {};
 
 (function () {
 
+    /**
+     * Appends an jQuery element to the container.
+     *
+     * @constructor
+     */
     lu.debug.DebugItemAppender = function () {
 
         var $item,

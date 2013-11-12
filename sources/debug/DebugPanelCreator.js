@@ -14,14 +14,14 @@ lu.debug = lu.debug || {};
 
         this.getOrCreate = function (selector) {
 
-            $panelElement = getSpecificElement(selector);
+            $panelElement = getSpecifiedPanelElement(selector);
 
             if (!isPanelElementAcceptable()) {
-                $panelElement = getDefaultElement();
+                $panelElement = getDefaultPanelElement();
             }
 
             if (!isPanelElementAcceptable()) {
-                $panelElement = createDefaultElement();
+                $panelElement = createDefaultPanelElement();
             }
 
             ensureCssClassOnElement();
@@ -33,15 +33,15 @@ lu.debug = lu.debug || {};
             return $panelElement !== undefined && $panelElement.length !== 0;
         }
 
-        function getSpecificElement(selector) {
+        function getSpecifiedPanelElement(selector) {
             return $(selector);
         }
 
-        function getDefaultElement() {
+        function getDefaultPanelElement() {
             return $("#" + defaultElementId);
         }
 
-        function createDefaultElement() {
+        function createDefaultPanelElement() {
             var $div = $("<div/>")
                 .attr("id", defaultElementId);
 

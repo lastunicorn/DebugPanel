@@ -13,6 +13,11 @@ lu.debug = lu.debug || {};
 
 (function ($) {
 
+    /**
+     * Creates jQuery elements for the messages that needs to be displayed.
+     *
+     * @constructor
+     */
     lu.debug.DebugItemCreator = function () {
 
         this.createItem = function (item) {
