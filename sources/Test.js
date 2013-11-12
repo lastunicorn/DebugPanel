@@ -35,7 +35,7 @@ window.lu = window.lu || {};
     function writeMessagesUsingASecondTemporaryObject() {
         var debugPanel2 = new lu.debug.DebugPanel(debugPanelConfiguration);
 
-        debugPanel2.writeInfo("This is a message written using a second DebugPanel object.");
+        debugPanel2.writeInfo("This is a message written using a second DebugPanel object. Looks no different from the others.");
     }
 
     function writeASecondWaveOfMessages() {
