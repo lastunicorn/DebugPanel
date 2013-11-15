@@ -2,20 +2,24 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/sources/debug/DebugItemCreator.min.js" />
-        <item url="file://$PROJECT_DIR$/sources/debug/DebugPanelCreator.min.js" />
-        <item url="file://$PROJECT_DIR$/sources/debug/DebugItemAppender.min.js" />
+        <item url="file://$PROJECT_DIR$/sources/debug/ItemCreator.min.js" />
+        <item url="file://$PROJECT_DIR$/sources/debug/PanelCreator.min.js" />
+        <item url="file://$PROJECT_DIR$/ant/compiled/libraries/jQuery/jquery-2.0.3.min.min.js" />
+        <item url="file://$PROJECT_DIR$/sources/debug/ItemLocation.min.js" />
+        <item url="file://$PROJECT_DIR$/sources/debug/ItemAppender.min.js" />
         <item url="file://$PROJECT_DIR$/sources/Test.min.js" />
+        <item url="file://$PROJECT_DIR$/sources/debug/ItemType.min.js" />
         <item url="file://$PROJECT_DIR$/sources/debug/DebugPanel.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/sources/debug/DebugItemCreator.min.js" />
-      <root url="file://$PROJECT_DIR$/sources/debug/DebugPanelCreator.min.js" />
-      <root url="file://$PROJECT_DIR$/sources/debug/DebugItemLocation.min.js" />
-      <root url="file://$PROJECT_DIR$/sources/debug/DebugItemAppender.min.js" />
+      <root url="file://$PROJECT_DIR$/sources/debug/ItemCreator.min.js" />
+      <root url="file://$PROJECT_DIR$/sources/debug/PanelCreator.min.js" />
+      <root url="file://$PROJECT_DIR$/ant/compiled/libraries/jQuery/jquery-2.0.3.min.min.js" />
+      <root url="file://$PROJECT_DIR$/sources/debug/ItemLocation.min.js" />
+      <root url="file://$PROJECT_DIR$/sources/debug/ItemAppender.min.js" />
       <root url="file://$PROJECT_DIR$/sources/Test.min.js" />
-      <root url="file://$PROJECT_DIR$/sources/debug/DebugItemType.min.js" />
+      <root url="file://$PROJECT_DIR$/sources/debug/ItemType.min.js" />
       <root url="file://$PROJECT_DIR$/sources/debug/DebugPanel.min.js" />
     </CLASSES>
     <SOURCES />

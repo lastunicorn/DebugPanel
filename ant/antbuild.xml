@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<project name="BioCalc" default="main" basedir="..">
+    <taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask" classpath="/home/alez/WebstormProjects/ExternalTools/ClosureCompiler/compiler.jar" />
+
+    <property name="dir.root" value=".." />
+    <property name="dir.compiled" value="compiled" />
+
+    <target name="main">
+        <antcall target="prepare.output.dir" />
+
+        <antcall target="copy.external.libraries" />
+
+        <antcall target="copy.dependency.projects" />
+
+        <antcall target="copy.other.files" />
+
+        <antcall target="compile.js">
+            <param name="file.output" value="${dir.compiled}/libraries/DebugPanel/DebugPanel.js" />
+        </antcall>
+    </target>
+
+    <target name="prepare.output.dir">
+        <echo message="Creating output directory: ${dir.compiled}." />
+
+        <mkdir dir="${dir.compiled}" />
+
+        <delete includeEmptyDirs="true">
+            <fileset dir="${dir.compiled}" includes="**/*" />
+        </delete>
+    </target>
+
+    <target name="copy.external.libraries">
+        <echo message="Copying external libraries." />
+
+        <mkdir dir="${dir.compiled}/libraries/jQuery" />
+
+        <copy todir="${dir.compiled}/libraries/jQuery">
+            <fileset dir="libraries/jQuery" />
+        </copy>
+    </target>
+
+    <target name="copy.dependency.projects">
+
+    </target>
+
+    <target name="copy.other.files">
+        <echo message="Copying other files." />
+
+        <mkdir dir="${dir.compiled}/images" />
+
+        <copy todir="${dir.compiled}/images">
+            <fileset dir="sources/images" />
+        </copy>
+
+        <copy file="sources/Test.css" todir="${dir.compiled}" />
+        <copy file="sources/Test.js" todir="${dir.compiled}" />
+        <copy file="sources/Test.html" todir="${dir.compiled}" />
+
+        <!--<copy file="changelog.txt" todir="${dir.compiled}" />
+        <copy file="license.txt" todir="${dir.compiled}" />-->
+    </target>
+
+    <target name="compile.js">
+        <echo message="Compiling the js files to ${file.output}." />
+
+        <jscomp compilationLevel="whitespace" prettyPrint="true" warning="verbose" debug="false" output="${file.output}">
+
+            <!-- The order of files is important -->
+
+            <sources dir="${basedir}/sources/debug">
+                <file name="DebugPanel.js" />
+                <file name="ItemAppender.js" />
+                <file name="ItemCreator.js" />
+                <file name="ItemLocation.js" />
+                <file name="ItemType.js" />
+                <file name="PanelCreator.js" />
+            </sources>
+
+        </jscomp>
+    </target>
+
+</project>
